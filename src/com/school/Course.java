@@ -3,13 +3,23 @@ package com.school;
 public class Course {
     private static int nextCourseIdCounter = 101;
 
-    int courseId; // Changed to int
-    String courseName;
+    private int courseId;       // Made private
+    private String courseName;  // Made private
 
     // Constructor
     public Course(String courseName) {
         this.courseId = nextCourseIdCounter++; // Auto-increment and assign ID
         this.courseName = courseName;          // Assign course name
+    }
+
+    // Getter for courseId
+    public int getCourseId() {
+        return courseId;
+    }
+
+    // Getter for courseName
+    public String getCourseName() {
+        return courseName;
     }
 
     public void displayDetails() {
